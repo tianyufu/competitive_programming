@@ -1,5 +1,5 @@
 class NextPermutation {
-    public static void nextPermutation(int[] nums) {
+    static void nextPermutation(int[] nums) {
         int n = nums.length;
 
         // 1 2 5 4 3 1
