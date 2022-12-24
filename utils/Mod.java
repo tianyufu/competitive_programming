@@ -6,6 +6,7 @@ class Mod {
         return modpow(x, MOD - 2);
     }
 
+    // Calculate (base ^ pow) % MOD
     static long modpow(long base, long pow) {
         long res = 1;
         while (pow > 0) {
