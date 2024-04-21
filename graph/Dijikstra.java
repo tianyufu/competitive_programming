@@ -22,7 +22,8 @@ class Dijkstra {
         while (!pq.isEmpty()) {
             int a = pq.poll()[1];
             if (visited[a]) continue;
-            visited = true;
+            visited[a] = true;
+            if (!g.containsKey(a)) continue;
             for (int[] next : g.get(a)) {
                 int b = next[0], w = next[1];
                 if (distance[a] + w < distance[b]) {
