@@ -16,4 +16,17 @@ class Mod {
         }
         return res;
     }
+
+    long nck(int n, int k) {
+        if (k < 0 || k > n) {
+            return 0;
+        }
+
+        long result = 1;
+        for (int i = 1; i <= k; i++) {
+            result = (result * (n - k + i)) % MOD;
+            result = (result * inv(i)) % MOD;
+        }
+        return result;
+    }
 }
