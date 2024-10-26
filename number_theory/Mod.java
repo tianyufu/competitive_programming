@@ -22,6 +22,10 @@ class Mod {
             return 0;
         }
 
+        if (k > n - k) {
+            return nck(n, n - k);
+        }
+
         long result = 1;
         for (int i = 1; i <= k; i++) {
             result = (result * (n - k + i)) % MOD;
