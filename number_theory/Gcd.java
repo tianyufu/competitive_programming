@@ -5,4 +5,8 @@ class Gcd {
         }
         return gcd(b, a % b);
     }
+
+    static long lcm (long a, long b) {
+        return a / gcd(a, b) * b;
+    }
 }
